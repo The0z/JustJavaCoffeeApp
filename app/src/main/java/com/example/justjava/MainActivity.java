@@ -1,11 +1,10 @@
-/**
- * IMPORTANT: Make sure you are using the correct package name. 
- * This example uses the package name:
- * package com.example.android.justjava
- * If you get an error when copying this code into Android studio, update it to match teh package name found
- * in the project's AndroidManifest.xml file.
- **/
-
+/*
+  IMPORTANT: Make sure you are using the correct package name.
+  This example uses the package name:
+  package com.example.android.justjava
+  If you get an error when copying this code into Android studio, update it to match teh package name found
+  in the project's AndroidManifest.xml file.
+ */
 package com.example.justjava;
 
 
@@ -37,10 +36,9 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        //int coffeeCost = 3; //Old Code used without string
-        //displayPrice(quantity*coffeeCost); //Old code used without string
-        String CupPrice = NumberFormat.getCurrencyInstance().format(quantity*5);
-        String priceMessage = "Your total comes to " + CupPrice + " for " + quantity + " cups of coffee";
+        int price = calculatePrice();
+        String priceText = displayPriceCurrency(price);
+        String priceMessage = "Your total comes to " + priceText + " for " + quantity + " cups of coffee";
         displayMessage(priceMessage);
     }
 
@@ -67,16 +65,15 @@ public class MainActivity extends AppCompatActivity {
      */
     private void displayQuantity(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
-        quantityTextView.setText("" + number);
+        String textToPrint = "" + number;
+        quantityTextView.setText(textToPrint);
     }
-
 
     /**
      * This method displays the given price on the screen.
      */
-    private void displayPrice(int number) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+    private String displayPriceCurrency(int number) {
+        return NumberFormat.getCurrencyInstance().format(number);
     }
 
     /**
@@ -90,9 +87,8 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method calculates the price of an item
      */
-    private int calculatePrice(int numOfItem, int pricePerItem){
-        int price = numOfItem * pricePerItem;
-        return price;
+    private int calculatePrice(){
+        return quantity*5;
     }
 
 

@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     public void submitOrder(View view) {
         int price = calculatePrice();
         String priceText = displayPriceCurrency(price);
-        String priceMessage = "Your total comes to " + priceText + " for " + quantity + " cups of coffee";
+        String priceMessage = "Total: " + priceText + "\nThank You!";
         displayMessage(priceMessage);
     }
 
@@ -86,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method calculates the price of an item
+     *
+     * @return total price
      */
     private int calculatePrice(){
         return quantity*5;

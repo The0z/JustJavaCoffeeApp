@@ -37,15 +37,24 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view) {
         int price = calculatePrice();
-        String priceText = displayPriceCurrency(price);
-        String priceMessage = "Total: " + priceText + "\nThank You!";
-        displayMessage(priceMessage);
+        displayMessage(createOrderSummary(price));
     }
 
-    /*
-    PsuedoCode - Code in Human Language (essentially what the code is doing).
-    Should read current quantity value
-    increase current quantity value by 1
+    /**
+     * This method is called when the order button is clicked.
+     * @return outputs the order summary for ordering coffee
+     */
+    private String createOrderSummary(int price) {
+        String priceText = displayPriceCurrency(price);
+        String orderSummary = "Name: Austin";
+        orderSummary += "\nQuantity: " + quantity + "\nTotal: " + priceText + "\nThank You!";
+        return orderSummary;
+    }
+
+    /**
+    * PsuedoCode - Code in Human Language (essentially what the code is doing).
+    * Should read current quantity value
+    * increase current quantity value by 1
     */
     public void increment(View view) {
         quantity = quantity + 1;

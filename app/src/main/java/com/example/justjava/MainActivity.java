@@ -10,9 +10,12 @@ package com.example.justjava;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.text.NumberFormat;
 
 //import android.support.v7.app.AppCompatActivity;
@@ -24,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Global Variable creation
     int quantity = 0;
-
+    String name = "No Name";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +49,35 @@ public class MainActivity extends AppCompatActivity {
      */
     private String createOrderSummary(int price) {
         String priceText = displayPriceCurrency(price);
-        String orderSummary = "Name: Austin";
+        customerName();
+        String orderSummary = name;
+        orderSummary += "\nAdd Whipped Cream? " + checkboxCheck((CheckBox)findViewById(R.id.whipped_cream_check));
+        orderSummary += "\nAdd Chocolate? " + checkboxCheck((CheckBox)findViewById(R.id.chocolate_check));
         orderSummary += "\nQuantity: " + quantity + "\nTotal: " + priceText + "\nThank You!";
         return orderSummary;
     }
+
+    /**
+     * This method is called when the EditText box is entered
+     * updates the global name variable
+     */
+    private void customerName() {
+        EditText userTextField = findViewById(R.id.name);
+        name = userTextField.getText().toString();
+        if(name.equals("")) {name = "No Name";}
+    }
+
+
+
+    /**
+     * This method is called when the order button is clicked.
+     * @return outputs yes or no depending on the state of the checkbox.
+     */
+    private String checkboxCheck(CheckBox hasBeenChecked) {
+        if(hasBeenChecked.isChecked()){ return "Yes"; }
+        else{ return "No"; }
+    }
+
 
     /**
     * PsuedoCode - Code in Human Language (essentially what the code is doing).

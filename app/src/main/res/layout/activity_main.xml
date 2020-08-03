@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:fillViewport="false">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="TOPPINGS"
+            android:text="@string/toppingsTitle"
             android:textAllCaps="true"
             android:textColor="@android:color/darker_gray"
             android:textSize="16sp" />
@@ -38,7 +38,7 @@
             android:layout_marginBottom="0dp"
             android:buttonTint="@color/whippedCreamCheckbox"
             android:paddingStart="24dp"
-            android:text="Whipped Cream"
+            android:text="@string/whipped_cream_checkboxText"
             android:textSize="16sp" />
 
         <CheckBox
@@ -48,14 +48,14 @@
             android:layout_marginBottom="16dp"
             android:buttonTint="@color/whippedCreamCheckbox"
             android:paddingStart="24dp"
-            android:text="Chocolate"
+            android:text="@string/chocolate_checkboxText"
             android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="Quantity"
+            android:text="@string/quantity_title"
             android:textAllCaps="true"
             android:textColor="@android:color/darker_gray"
             android:textSize="16sp" />
@@ -72,7 +72,7 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
                 android:onClick="decrement"
-                android:text="-"
+                android:text="@string/negative_buttonText"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
@@ -84,7 +84,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="0"
+                android:text="1"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
@@ -95,7 +95,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="8dp"
                 android:onClick="increment"
-                android:text="+"
+                android:text="@string/positive_ButtonText"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
@@ -103,29 +103,11 @@
 
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="order summary"
-            android:textAllCaps="true"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/order_summary_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="$0"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="submitOrder"
-            android:text="Order"
+            android:text="@string/order_buttonText"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
 

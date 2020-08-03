@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Just Java</string>
+    <string name="toppingsTitle">INGREDIENTES</string>
+    <string name="whipped_cream_checkboxText">Crema batida</string>
+    <string name="chocolate_checkboxText">chocolate</string>
+    <string name="order_buttonText">orden</string>
+    <string name="quantity_title">" cantidad"</string>
+    <string name="negative_buttonText">-</string>
+    <string name="positive_ButtonText">+</string>
+    <string name="max_order_coffee_toast">" No puedes pedir más de 100 tazas de café."</string>
+    <string name="min_order_coffee_toast">" No puede pedir menos de 1 taza de café."</string>
+    <string name="hotmail_address">JustJavaCoffeeStore@hotmail.com</string>
+    <string name="default_name">Sin nombre</string>
+    <string name="order_summary_name">" Nombre: <xliff:g example="Amy" id="name">%s</xliff:g>"</string>
+    <string name="yes_message">" Si"</string>
+    <string name="no_message">" No"</string>
+    <string name="customerName">Por favor ingrese el nombre</string>
+    <string name="order_summary_email_subject">JustJava Coffee Order para <xliff:g id="name" example="Amy">%s</xliff:g></string>
+    <string name="quantity">\ncantidad</string>
+    <string name="add_chocolate">\nAñadir chocolate?</string>
+    <string name="add_whipped_cream">\nAñadir crema batida?</string>
+    <string name="thank_you_message">\n¡Gracias!</string>
+    <string name="total">\nTotal:</string>
+</resources>
